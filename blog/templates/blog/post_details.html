@@ -5,17 +5,16 @@
         <main class="container">
             <div class="row">
                 <div class="col">
-                    {% for post in posts %}
+                    
                         <article class="post">
                             <time class="date">
-                                {{ post.published_date }}
+                                {{ post_item.published_date }}
                             </time>
-                            <h2><a href="{% url 'post_details' pk=post.pk %}">{{ post.title }}</a></h2>
-                            <p>{{ post.text|linebreaksbr }}</p>
+                            <h2>{{ post_item.title }}</h2>
+                            <p>{{ post_item.text|linebreaksbr }}</p>
                         </article>
-                    {% endfor %}
                 </div>
             </div>
         </main>
 
-        {% endblock %}
+    {% endblock %}

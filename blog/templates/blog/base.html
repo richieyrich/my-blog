@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <title>Django Boys blog</title>
+    </head>
+    <body>
+        <header class="page-header">
+            <div class="container">
+                <h1><a href="/">Django Boys Blog</a></h1>
+            </div>
+        </header>
+        <strong>Welcome</strong>
+
+        {% block contend %}
+
+        {% endblock %}
+
+        <script src="{% static 'js/bootstrap.js' %}"></script>
+    </body>
+</html>
